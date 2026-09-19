@@ -1,0 +1,419 @@
+{
+  "game": "Realm of Legends",
+  "tagline": "A high-fantasy action RPG where ancient powers clash in the shattered realm of Aethelgard.",
+  "characters": [
+    {
+      "id": "aria",
+      "name": "Aria",
+      "class": "Mage",
+      "element": "Light & Arcane",
+      "description": "A master of celestial radiance and arcane weaver who dominates battles from safe range with devastating burst spells.",
+      "baseStats": { "health": 650, "mana": 1200, "attack": 92, "defense": 45, "speed": 60 },
+      "abilities": [
+        { "name": "Light Nova", "type": "Active", "description": "Blasts surrounding foes with pure solar light, dealing massive elemental damage and blinding them for 3s." },
+        { "name": "Arcane Surge", "type": "Active", "description": "Channels raw magical essence, increasing spell casting speed by 40% and mana regen by 100% for 8s." },
+        { "name": "Frost Ward", "type": "Defensive", "description": "Conjures an icy barrier absorbing up to 500 damage while chilling attackers." },
+        { "name": "Celestial Beam", "type": "Ultimate", "description": "Calls down a focused beam of sunlight piercing through targets and disintegrating shadow shields." }
+      ],
+      "recommendedPlaystyles": ["Balanced", "Aggressive", "Speed"]
+    },
+    {
+      "id": "kael",
+      "name": "Kael",
+      "class": "Warrior",
+      "element": "Physical & Fire",
+      "description": "An immovable frontline powerhouse clad in dragon-forged plate, controlling combat rhythm through staggers and shield parries.",
+      "baseStats": { "health": 1450, "mana": 350, "attack": 78, "defense": 95, "speed": 40 },
+      "abilities": [
+        { "name": "Shield Slam", "type": "Active", "description": "Dashes forward slamming heavy buckler, causing heavy posture damage and staggering enemies." },
+        { "name": "Iron Will", "type": "Defensive", "description": "Hardens skin like granite, mitigating 60% incoming damage and becoming immune to knockbacks for 6s." },
+        { "name": "Whirlwind Strike", "type": "Active", "description": "Spins greatsword in a 360-degree cleave, cutting through packs of minions with bonus bleed." },
+        { "name": "Colossus Roar", "type": "Ultimate", "description": "Taunts all foes in 20m radius, regenerating 30% max HP and boosting team attack power." }
+      ],
+      "recommendedPlaystyles": ["Defensive", "Balanced"]
+    },
+    {
+      "id": "nyx",
+      "name": "Nyx",
+      "class": "Assassin",
+      "element": "Shadow & Poison",
+      "description": "A lethal shadow-dancer specializing in rapid execution, stealth repositioning, and pinpoint critical strikes.",
+      "baseStats": { "health": 720, "mana": 500, "attack": 110, "defense": 50, "speed": 95 },
+      "abilities": [
+        { "name": "Shadow Strike", "type": "Active", "description": "Teleports behind the designated enemy, dealing 300% critical damage from stealth." },
+        { "name": "Vanish", "type": "Defensive", "description": "Throws a smoke pellet, entering true invisibility for 4s with 50% movement speed bonus." },
+        { "name": "Poison Flurry", "type": "Active", "description": "Unleashes 5 rapid dual-dagger strikes applying stacking venom that damages over time." },
+        { "name": "Death Mark", "type": "Ultimate", "description": "Marks a single enemy. After 5s, the mark detonates dealing 40% of all damage dealt during the mark." }
+      ],
+      "recommendedPlaystyles": ["Aggressive", "Speed"]
+    },
+    {
+      "id": "orion",
+      "name": "Orion",
+      "class": "Ranger",
+      "element": "Nature & Lightning",
+      "description": "A keen-eyed scout who controls the battlefield with precision trick shots, elemental quivers, and tactical snare traps.",
+      "baseStats": { "health": 800, "mana": 600, "attack": 98, "defense": 58, "speed": 80 },
+      "abilities": [
+        { "name": "Hunter's Mark", "type": "Debuff", "description": "Paints a priority target, exposing weak spots and increasing critical hit chance against them by 25%." },
+        { "name": "Piercing Shot", "type": "Active", "description": "Fires a high-velocity enchanted bolt that pierces through up to 4 enemies in a straight line." },
+        { "name": "Snare Trap", "type": "Utility", "description": "Places a concealed vine trap that roots any enemy triggering it for 4s." },
+        { "name": "Storm Volley", "type": "Ultimate", "description": "Rains down a barrage of electrified arrows over a target zone, shocking and interrupting all inside." }
+      ],
+      "recommendedPlaystyles": ["Speed", "Balanced"]
+    }
+  ],
+  "bosses": [
+    {
+      "id": "shadow-king",
+      "name": "Shadow King",
+      "location": "Obsidian Citadel — Throne of Eclipse",
+      "recommendedLevel": 15,
+      "weakness": "Light Damage",
+      "resistance": "Dark & Shadow Magic",
+      "phases": 2,
+      "recommendedCharacter": "Aria",
+      "description": "The cursed monarch of Aethelgard submerged in abyssal void energy. He channels an impenetrable dark barrier and delivers screen-wide shadow bursts.",
+      "attacks": [
+        { "name": "Shadow Burst", "description": "Charges dark energy for 2.5s then releases a radial shockwave across 15 meters." },
+        { "name": "Void Cleave", "description": "Two heavy sword swings leaving dark rifts on the ground that ignite after 1s." },
+        { "name": "Umbral Blink", "description": "Instantly teleports behind the player to perform an execute stab." },
+        { "name": "Summon Shades", "description": "Spawns 3 shadow illusions that cast homing dark orbs." }
+      ],
+      "hints": [
+        "Pay attention to the element powering the boss's shield.",
+        "His shield becomes weaker right after he channels and executes Shadow Burst.",
+        "Use light-based attacks immediately after Shadow Burst to shatter his shield during his recovery animation.",
+        "Select a light-based character like Aria. Maintain distance, wait for Shadow Burst animation, dodge sideways to avoid the shockwave, then immediately cast Light Nova during his 5-second vulnerability window. Do not attack while the dark shield is shimmering."
+      ],
+      "strategy": {
+        "recommendedCharacter": "Aria",
+        "recommendedAbilities": ["Light Nova", "Arcane Surge", "Frost Ward"],
+        "recommendedEquipment": ["Sunstone Talisman", "Robe of Dawn", "Lumina Staff"],
+        "approach": "Stay at mid-to-long range, conserve your dash for the Shadow Burst shockwave, and burst him down during shield downtime.",
+        "steps": [
+          "Maintain distance: Keep at least 10 meters distance to give yourself reaction time against Umbral Blink.",
+          "Bait Shadow Burst: Watch for his sword raising upright with purple runes. Stop casting.",
+          "Dodge sideways: As the purple aura peaks (2.5s mark), dash perpendicular to the shockwave.",
+          "Shatter with Light: Cast Light Nova immediately while he is locked in his 4-second recovery.",
+          "Burst during vulnerability: Activate Arcane Surge and unleash your heavy spells before shield reforms.",
+          "Repeat & manage adds: In Phase 2, dispatch the 3 shades with Frost Ward + AoE before refocusing the King."
+        ],
+        "warnings": [
+          "Do NOT attack while the dark shield is shimmering — all damage is reflected at 50% power.",
+          "Do NOT dodge backward during Shadow Burst; the shockwave propagates forward and will catch you."
+        ]
+      }
+    },
+    {
+      "id": "fire-titan",
+      "name": "Fire Titan",
+      "location": "Molten Crag — Magma Core",
+      "recommendedLevel": 18,
+      "weakness": "Frost & Water Damage",
+      "resistance": "Fire & Burn Effects",
+      "phases": 2,
+      "recommendedCharacter": "Aria or Orion",
+      "description": "A colossal elemental guardian forged from volcanic core rock. Its armor plate deflects basic strikes until chilled to cracking point.",
+      "attacks": [
+        { "name": "Magma Stomp", "description": "Slams foot into ground, causing geysers of molten rock to erupt under the player." },
+        { "name": "Molten Core", "description": "Exposes chest core, spewing continuous fire breath in a 120-degree cone." },
+        { "name": "Lava Wave", "description": "Pounds both fists, sending two rolling tidal waves of molten rock across the arena." }
+      ],
+      "hints": [
+        "The Titan's armor cannot be pierced with physical or fire weapons.",
+        "Look at the cooling effect on his stone feet when struck with frost magic.",
+        "Hit his legs with Frost abilities until the armor crystallizes and fractures, staggering him.",
+        "Equip frost spells or frost arrows. Target his lower limbs with Frost Ward / Cold shots until his armor breaks into brittle granite. Once staggered, sprint to his glowing chest core and unleash your highest burst damage."
+      ],
+      "strategy": {
+        "recommendedCharacter": "Aria",
+        "recommendedAbilities": ["Frost Ward", "Celestial Beam", "Arcane Surge"],
+        "recommendedEquipment": ["Glacial Ring", "Frostweave Tunic", "Cryo Focus"],
+        "approach": "Keep moving in a circular orbit to stay clear of ground lava fissures while pelting his legs with frost spells.",
+        "steps": [
+          "Target the legs: Consistently apply frost spells to build up the brittle frost gauge.",
+          "Watch the ground: Constant red circles warn of magma geysers — never stand still for more than 2 seconds.",
+          "Capitalize on Stagger: When the frost gauge fills, the Titan collapses for 8 seconds.",
+          "Burn the Core: Sprint directly beneath his chest and channel Celestial Beam for triple critical damage."
+        ],
+        "warnings": [
+          "Standing on hardened lava tiles burns your boots, inflicting severe Burn DoT.",
+          "Do not use Fire spells; they heal the Titan for 15% of the damage value!"
+        ]
+      }
+    },
+    {
+      "id": "frost-witch",
+      "name": "Frost Witch",
+      "location": "Howling Peaks — Crystalline Palace",
+      "recommendedLevel": 20,
+      "weakness": "Fire & Rapid Physical Burst",
+      "resistance": "Frost & Slow Effects",
+      "phases": 3,
+      "recommendedCharacter": "Kael or Nyx",
+      "description": "A reclusive sorceress wielding pure absolute-zero frost, capable of splitting into mirror illusions and freezing entire rooms.",
+      "attacks": [
+        { "name": "Blizzard Storm", "description": "Channels a room-wide ice storm reducing visibility and stacking chill debuff." },
+        { "name": "Ice Lance Barrage", "description": "Fires 8 rapid tracking icicles from levitating mirrors." },
+        { "name": "Mirror Clones", "description": "Splits into 3 identical reflections; only one takes true damage." }
+      ],
+      "hints": [
+        "She hides behind mirror illusions to protect her fragile physical body.",
+        "Notice that the real witch casts a faint shadow on the snow while illusions do not.",
+        "Look for the shadow beneath her feet during Mirror Clones, and use Fire burst immediately.",
+        "Use Nyx or Kael. When she splits into Mirror Clones, identify the real one by the shadow under her feet (or the glowing rune over her head). Close the distance with Vanish or Shield Slam, interrupt her Blizzard channel with high physical stagger, and burn her down with Fire attacks."
+      ],
+      "strategy": {
+        "recommendedCharacter": "Nyx",
+        "recommendedAbilities": ["Shadow Strike", "Vanish", "Poison Flurry"],
+        "recommendedEquipment": ["Ignis Daggers", "Shadowveil Boots", "Ring of Embers"],
+        "approach": "Close gaps instantly using stealth and dashes to prevent her from finishing her lethal Blizzard chant.",
+        "steps": [
+          "Bypass icicles: Use Vanish when the Ice Lance mirrors align to cancel their tracking lock.",
+          "Find the genuine Witch: Spot the shadow underneath her floating cloak during the clone phase.",
+          "Interrupt Blizzard: Dash behind the real witch with Shadow Strike to stagger her out of the ultimate channel.",
+          "Execute: Pop Death Mark and follow up with Poison Flurry to trigger rapid health bar melt."
+        ],
+        "warnings": [
+          "If the Chill debuff reaches 5 stacks, your character is encased in ice for 4 seconds.",
+          "Attacking the wrong clone shatters it into an explosive frost trap."
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "the-lost-crystal",
+      "name": "The Lost Crystal",
+      "chapter": "Chapter 2: Shards of Dawn",
+      "recommendedLevel": 12,
+      "location": "Whispering Ruins — Sunken Sanctum",
+      "description": "Locate and retrieve the ancient Lumina Crystal, a relic capable of dispelling shadow miasma before the Eclipse cult captures it.",
+      "objectives": [
+        "Infiltrate the Sunken Sanctum of Whispering Ruins",
+        "Solve the 3-elemental obelisk puzzle (Sun, Moon, Star)",
+        "Defeat the Temple Guardian Sentinel",
+        "Extract the Lumina Crystal from the pedestaled altar"
+      ],
+      "steps": [
+        "Head east from the Riverford Outpost across the mossy stone bridge.",
+        "Look for the submerged arches marking the entrance to the Sunken Sanctum.",
+        "To solve the Obelisk Puzzle: Strike Sun (Fire/Light) -> Star (Arcane/Lightning) -> Moon (Water/Frost) in exact sequence within 15 seconds.",
+        "Clear the Stone Sentinel by destroying its core power crystals located on both shoulders.",
+        "Interact with the crystal altar to claim the Lumina Crystal."
+      ],
+      "hints": [
+        "The ancient inscriptions above the Sanctum archway reference the celestial order of dawn.",
+        "The obelisks must be activated starting from the rising sun to the night sky.",
+        "Activate in order: Sun obelisk first, then Star obelisk, then Moon obelisk.",
+        "Head to the central chamber. Strike the Sun obelisk with a light or fire attack, quickly sprint left to strike the Star obelisk, then strike the Moon obelisk on the far right within 15 seconds. Once the chamber opens, aim your ranged attacks at the Sentinel's glowing shoulder joints."
+      ]
+    },
+    {
+      "id": "escape-from-dark-valley",
+      "name": "Escape from Dark Valley",
+      "chapter": "Chapter 3: Through the Gloom",
+      "recommendedLevel": 14,
+      "location": "Dark Valley — Black Marsh",
+      "description": "Escort the wounded elven caravan through a cursed valley blanketed in toxic miasma while fending off ambush predators.",
+      "objectives": [
+        "Craft 3 Purification Flasks using Lumina Moss",
+        "Lead the caravan safely across the sunken bog",
+        "Neutralize the ambush at the Valley Gorge",
+        "Breach the Southern Gate before nightfall"
+      ],
+      "steps": [
+        "Gather Lumina Moss growing on tree trunks near glowing white fungi.",
+        "Interact with the campfire alchemy station to brew Purification Flasks.",
+        "Stay within 10 meters of the caravan wagon to maintain the aura barrier.",
+        "When ambushed at the gorge, prioritize the enemy snipers on high ledges.",
+        "Use a heavy weapon or explosive barrel to blow open the locked Southern Gate."
+      ],
+      "hints": [
+        "The purple fog rapidly depletes your stamina unless cleansed by local flora.",
+        "Collect the glowing moss on trees to brew protective tinctures before starting the escort.",
+        "Make sure you brew 3 Purification Flasks and place explosive barrels near the gate.",
+        "Craft 3 Purification Flasks using Lumina Moss found on north trees. Stay close to the wagon for shield regen. When reaching the gate, roll the red powder keg next to the timber locks and detonate it with a fire spell."
+      ]
+    },
+    {
+      "id": "rise-of-the-shadow-king",
+      "name": "Rise of the Shadow King",
+      "chapter": "Chapter 4: Eclipse Citadel",
+      "recommendedLevel": 15,
+      "location": "Obsidian Citadel",
+      "description": "Infiltrate the cursed citadel, cleanse the 4 Void Anchors fueling the dark fortress, and defeat the Shadow King on his throne.",
+      "objectives": [
+        "Infiltrate the Obsidian Citadel courtyard",
+        "Destroy the 4 Void Anchors tethering the eclipse barrier",
+        "Obtain the Sunstone Key from the High Inquisitor",
+        "Confront and defeat the Shadow King in the Throne Room"
+      ],
+      "steps": [
+        "Enter through the drainage aqueducts under the citadel bridge to bypass ballista fire.",
+        "Locate the 4 pulsing purple obelisks in the courtyard corners. Destroy them using radiant spells or holy water.",
+        "Defeat the High Inquisitor in the Grand Archive to loot the Sunstone Key.",
+        "Unlock the monumental gate and enter the Throne Room to face the Shadow King."
+      ],
+      "hints": [
+        "Direct assault on the main gate triggers lethal siege ballistas.",
+        "The drainage sewer on the west cliff provides stealth entry into the inner yard.",
+        "Destroy the 4 corner void pylons before attempting to challenge the throne room.",
+        "Slip through the sewer grate beneath the bridge on the west side. Destroy each of the 4 Void Anchors with Light attacks to disable the barrier. Defeat Inquisitor Vane for the key, then prepare for the Shadow King with Light Nova and mobility gear."
+      ]
+    },
+    {
+      "id": "the-forgotten-temple",
+      "name": "The Forgotten Temple",
+      "chapter": "Chapter 5: Desert of Whispers",
+      "recommendedLevel": 18,
+      "location": "Sunfire Desert",
+      "description": "Unearth the ancient archives hidden beneath shifting desert sands by aligning light mirrors and solving astronomical glyphs.",
+      "objectives": [
+        "Locate the sunken temple entrance using the Golden Compass",
+        "Align 3 solar reflector mirrors to project a beam onto the seal",
+        "Disarm the pressure-plate spike corridors",
+        "Retrieve the Archivist Seal of the First Age"
+      ],
+      "steps": [
+        "Follow the magnetic needle of the Golden Compass into the dunes.",
+        "Rotate the brass mirrors in the central courtyard until the concentrated sunbeam hits the ruby gem above the door.",
+        "Cross the corridor by stepping ONLY on tiles inscribed with the Sun glyph.",
+        "Interact with the sarcophagus to claim the Archivist Seal."
+      ],
+      "hints": [
+        "The mirrors need to bounce sunlight in a continuous zigzag pattern.",
+        "Notice the floor tile symbols: stepping on Moon or Star triggers deadly darts.",
+        "Align mirrors left to center to ruby gate, and walk only on Sun tiles.",
+        "Rotate Mirror 1 by 45° clockwise, Mirror 2 by 90° counter-clockwise, and Mirror 3 toward the center gem. When navigating the hallway, step strictly on the Sun glyph stones (avoid Skull and Moon plates). Claim the seal at the altar."
+      ]
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "elemental-damage",
+      "name": "Elemental Damage & Affinities",
+      "description": "Realm of Legends uses a rock-paper-scissors elemental matrix. Light shatters Shadow; Frost crystallizes and slows Fire; Fire melts and burns Nature/Frost; Lightning conducts through Heavy Armor causing chained stuns.",
+      "tips": "Always equip an element contrasting the region's dominant enemy type for 200% damage multiplier."
+    },
+    {
+      "id": "stagger-system",
+      "name": "Stagger & Posture Meter",
+      "description": "Elite enemies and bosses feature a golden posture bar below health. Heavy attacks, parries, and elemental counter-strikes deplete posture. When emptied, the enemy enters a Stagger state for 5-8 seconds taking 250% critical damage.",
+      "tips": "Save your highest-cooldown ultimate abilities for when the boss's stagger bar completely breaks."
+    },
+    {
+      "id": "equipment-upgrades",
+      "name": "Blacksmith & Runic Sockets",
+      "description": "Weapons and armor can be upgraded up to +10 using Star Metal Ore. At levels +3, +6, and +9, runic sockets unlock allowing insertion of Dawn Runes (Light), Frost Runes, or Venom Gems.",
+      "tips": "Prioritize upgrading your main-hand weapon to +5 before upgrading defense pieces."
+    },
+    {
+      "id": "skill-points",
+      "name": "Skill Points & Mastery Trees",
+      "description": "Each player level awards 1 Skill Point. Mastery trees allow branch specialization (e.g. Aria can spec into Celestial Radiant or Chrono-Arcane; Nyx can spec into Shadow Lethality or Toxic Saboteur).",
+      "tips": "Respec is free at any sanctuary bonfire — adapt your build for specific boss weaknesses."
+    }
+  ],
+  "builds": [
+    {
+      "characterId": "aria",
+      "playStyle": "Aggressive",
+      "name": "Solar Flare Burst Mage",
+      "statPriorities": ["Spell Critical Rate", "Light Elemental Power", "Cast Speed"],
+      "recommendedAbilities": ["Light Nova", "Celestial Beam", "Arcane Surge"],
+      "recommendedEquipment": [
+        "Staff of the Solstice (+8 Light Boost)",
+        "Dawnveil Silk Robes",
+        "Sunstone Pendant of Ferocity",
+        "Boots of Haste"
+      ],
+      "combatStrategy": "Open with Arcane Surge to cap cast speed, close into mid-range for a massive Light Nova burst, then finish remaining high-HP targets with a piercing Celestial Beam. Use Frost Ward purely as an offensive self-buff if needed."
+    },
+    {
+      "characterId": "aria",
+      "playStyle": "Balanced",
+      "name": "Chrono-Radiant Archmage",
+      "statPriorities": ["Light Damage", "Mana Regeneration", "Cooldown Reduction"],
+      "recommendedAbilities": ["Light Nova", "Frost Ward", "Arcane Surge"],
+      "recommendedEquipment": [
+        "Lumina Wand of Balance",
+        "Enchanted Moonweave Cowl",
+        "Amulet of Serenity",
+        "Runic Spellweaver Boots"
+      ],
+      "combatStrategy": "Maintain an active Frost Ward barrier while kiting foes with light projectiles. Trigger Light Nova whenever enemies bundle up or bosses expose their vulnerability window."
+    },
+    {
+      "characterId": "aria",
+      "playStyle": "Defensive",
+      "name": "Glacial Sanctuary Mage",
+      "statPriorities": ["Max Mana / Barrier Strength", "Health", "Frost Resistance"],
+      "recommendedAbilities": ["Frost Ward", "Arcane Surge", "Light Nova"],
+      "recommendedEquipment": [
+        "Cryo-Forged Scepter",
+        "Aegis of the Winter Solstice",
+        "Tear of the Archon",
+        "Frost-Tread Boots"
+      ],
+      "combatStrategy": "Stack barriers with Frost Ward and rely on chill auras to slow boss advance by 45%. Wear down enemies with sustained light ticks while never entering melee reach."
+    },
+    {
+      "characterId": "aria",
+      "playStyle": "Speed",
+      "name": "Flash-Cast Chronomancer",
+      "statPriorities": ["Movement Speed", "Cast Speed", "Dodge Recovery"],
+      "recommendedAbilities": ["Arcane Surge", "Light Nova", "Frost Ward"],
+      "recommendedEquipment": [
+        "Zephyr Branch Staff",
+        "Wind-Dancer Tunic",
+        "Ring of Momentum",
+        "Mercury Striders"
+      ],
+      "combatStrategy": "Constantly sprint and circle-strafe. Use instantaneous Arcane Surge to weave in and out of enemy threat cones while firing precision Light Novas."
+    },
+    {
+      "characterId": "nyx",
+      "playStyle": "Aggressive",
+      "name": "Critical Deathmark Assassin",
+      "statPriorities": ["Critical Damage (300%+)", "Attack Speed", "Armor Penetration"],
+      "recommendedAbilities": ["Shadow Strike", "Vanish", "Death Mark"],
+      "recommendedEquipment": [
+        "Twin Obsidian Daggers of Ruin",
+        "Nightstalker Leather Cuirass",
+        "Ring of Malice",
+        "Boots of Silent Steps"
+      ],
+      "combatStrategy": "Cast Vanish -> approach behind target -> trigger Death Mark -> immediately unload Shadow Strike and Poison Flurry. The accumulated burst detonates the Death Mark for instant kill."
+    },
+    {
+      "characterId": "kael",
+      "playStyle": "Defensive",
+      "name": "Iron Bastion Juggernaut",
+      "statPriorities": ["Damage Reduction", "Block Efficiency", "Max Health"],
+      "recommendedAbilities": ["Shield Slam", "Iron Will", "Colossus Roar"],
+      "recommendedEquipment": [
+        "Aegis of the Dragon King",
+        "Drakescale Full Plate",
+        "Bulwark Signet",
+        "Greaves of the Mountain"
+      ],
+      "combatStrategy": "Time Shield Slams to parry boss heavy hits, immediately causing posture rupture. Activate Iron Will during unblockable slams to absorb hits without flinching."
+    },
+    {
+      "characterId": "orion",
+      "playStyle": "Speed",
+      "name": "Thunderstorm Kiting Ranger",
+      "statPriorities": ["Movement Speed", "Attack Speed", "Lightning Damage"],
+      "recommendedAbilities": ["Hunter's Mark", "Storm Volley", "Snare Trap"],
+      "recommendedEquipment": [
+        "Tempest Recurve Bow",
+        "Featherlight Quiver",
+        "Ring of the Zephyr",
+        "Strider Moccasins"
+      ],
+      "combatStrategy": "Drop Snare Traps while walking backwards. Mark target to expose critical zones, then channel Storm Volley to lock them into continuous electrocution."
+    }
+  ]
+}

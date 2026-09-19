@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0c0e1a"/>
+  <!-- Controller Body -->
+  <path d="M16 26C16 21 21 18 32 18C43 18 48 21 48 26C48 36 44 46 39 46C35 46 34 40 32 40C30 40 29 46 25 46C20 46 16 36 16 26Z" fill="url(#grad)" />
+  <!-- D-pad -->
+  <path d="M23 27H27M25 25V29" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Buttons -->
+  <circle cx="39" cy="26" r="1.5" fill="#ffffff"/>
+  <circle cx="43" cy="28" r="1.5" fill="#ffffff"/>
+  <!-- AI Sparkle/Star in top-right -->
+  <path d="M48 10L50 15L55 17L50 19L48 24L46 19L41 17L46 15Z" fill="#fbbf24"/>
+</svg>
